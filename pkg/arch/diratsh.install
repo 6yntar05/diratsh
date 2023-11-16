@@ -1,0 +1,3 @@
+post_upgrade() {
+        grep -qe '^/usr/bin/diratsh$' etc/shells || echo '/usr/bin/diratsh' >> etc/shells
+}

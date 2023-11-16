@@ -1,0 +1,14 @@
+pkgbase = diratsh
+	pkgver = 2.2.8
+	pkgrel = 1
+	url = https://github.com/6yntar05/diratsh
+	install = diratsh.install
+	arch = x86_64
+	arch = aarch64
+	license = none
+	optdepends = fish: Bro just install fish...
+	optdepends = zsh: ...or zsh...
+	source = diratsh-2.2.8.tar.gz::https://github.com/6yntar05/diratsh/archive/refs/tags/v2.2.8.tar.gz
+	sha256sums = d9c95df9c79a9b1493a1807599e23c5f8687a62091e6208b1710def2ee9d05fe
+
+pkgname = diratsh

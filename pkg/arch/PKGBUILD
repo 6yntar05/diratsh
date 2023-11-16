@@ -1,0 +1,30 @@
+pkgname=diratsh
+pkgver=2.2.8
+pkgrel=1
+pkggesc='Fundamentally new linux shell, specially created for one person'
+arch=('x86_64' 'i686' 'aarch64')
+url='https://github.com/6yntar05/diratsh'
+license=('none')
+makedepeds=(
+    'gcc'
+    'make'
+)
+optdepends=(
+    'fish: Bro just install fish...'
+    'zsh: ...or zsh...'
+)
+install="$pkgname.install"
+source=("$pkgname-$pkgver.tar.gz::https://github.com/6yntar05/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
+b2sum=('6c2add3e9cd31ed65c43c8b4933bf3691b08118a7a26dff5b59d970d26f2fe8d7d4401a038c3fdaedbd395cf0effd3a941d3e97e78893a18bb52dfb28e3f193b')
+sha256sums=('d9c95df9c79a9b1493a1807599e23c5f8687a62091e6208b1710def2ee9d05fe')
+
+build() {
+    cd "$pkgname-$pkgver"
+    make build
+}
+
+package() {
+    cd "$pkgname-$pkgver"
+    mkdir -p "$pkgdir/usr/local/bin"
+    make DESTDIR="$pkgdir" package
+}
