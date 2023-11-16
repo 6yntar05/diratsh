@@ -15,8 +15,8 @@ optdepends=(
 )
 install="$pkgname.install"
 source=("$pkgname-$pkgver.tar.gz::https://github.com/6yntar05/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
-b2sum=('6c2add3e9cd31ed65c43c8b4933bf3691b08118a7a26dff5b59d970d26f2fe8d7d4401a038c3fdaedbd395cf0effd3a941d3e97e78893a18bb52dfb28e3f193b')
-sha256sums=('d9c95df9c79a9b1493a1807599e23c5f8687a62091e6208b1710def2ee9d05fe')
+b2sum=('bb96bbed9ef27703d175ec2702a61cf2ee950a5431f37b6bfd3cd6d8e28da4d36a4f5054ce6238de8781575e8057d02c79ca641507fb705424f6fd06f3082624')
+sha256sums=('f145c5d6614b97a935aefb8a3b6b89692e78ba82f42f5d4c9ade6100953e53fe')
 
 build() {
     cd "$pkgname-$pkgver"
